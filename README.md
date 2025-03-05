@@ -4,12 +4,12 @@ This repository contains implementations of various search algorithms and proble
 Table of Contents
 1.	8-Puzzle Problem
 2.	8-Queens Problem
-3.	Crypt Arithmetic Problem
-4.	A* Algorithm
-5.	Mini-Max Algorithm (Alpha-Beta Pruning)
-6.	Constraint Satisfaction Problems
-7.	Forward Chaining Algorithm
-8.	Backward Chaining Algorithm
+3.	A* Algorithm
+4.	Crypt Arithmetic Problem
+6.	Mini-Max Algorithm (Alpha-Beta Pruning)
+7.	Constraint Satisfaction Problems
+8.	Forward Chaining Algorithm
+9.	Backward Chaining Algorithm
    
 Requirements
 •	Python 3.x
