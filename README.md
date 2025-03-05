@@ -6,10 +6,10 @@ Table of Contents
 2.	8-Queens Problem
 3.	A* Algorithm
 4.	Crypt Arithmetic Problem
-6.	Mini-Max Algorithm (Alpha-Beta Pruning)
-7.	Constraint Satisfaction Problems
-8.	Forward Chaining Algorithm
-9.	Backward Chaining Algorithm
+5.	Mini-Max Algorithm (Alpha-Beta Pruning)
+6.	Forward Chaining Algorithm
+7.	Backward Chaining Algorithm
+8. Constraint Satisfaction Problems
    
 Requirements
 •	Python 3.x
