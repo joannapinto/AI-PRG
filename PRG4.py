@@ -1,23 +1,26 @@
-from queue import PriorityQueue
 
-def get_distance(value, goal):
-    return sum(v != g for v, g in zip(value, goal))
+from itertools import permutations
 
-def solve(start, goal):
-    pq, visited = PriorityQueue(), {start}
-    pq.put((0, start, [start]))
+def solve(word1, word2, result):
+    letters = set(word1 + word2 + result)
+    if len(letters) > 10:
+        print("No solutions")
+        return
 
-    while pq:
-        _, current, path = pq.get()
-        if current == goal: return path
-        for i in range(len(current) - 1):
-            next_state = current[:i] + current[i + 1] + current[i] + current[i + 2:]
-            if next_state not in visited:
-                visited.add(next_state)
-                pq.put((get_distance(next_state, goal) + len(path), next_state, path + [next_state]))
+    for perm in permutations(range(10), len(letters)):
+        assign = dict(zip(letters, perm))
+        if any(assign[w[0]] == 0 for w in (word1, word2, result)):
+            continue
 
-    return []
+        num1 = int("".join(str(assign[char]) for char in word1))
+        num2 = int("".join(str(assign[char]) for char in word2))
+        new_res = int("".join(str(assign[char]) for char in result))
 
-if __name__ == "__main__":
-    path = solve("secure", "rescue")
-    print("\n".join(f"{i}) {step}" for i, step in enumerate(path)))
+        if num1 + num2 == new_res:
+            print(f"{num1} + {num2} = {new_res}, Assignment: {assign}")
+            return
+
+    print("No solution found.")
+
+print("CRYPTARITHMETIC PUZZLE SOLVER")
+solve(input("Enter the first word: ").upper(), input("Enter the second word: ").upper(), input("Enter the result: ").upper())
