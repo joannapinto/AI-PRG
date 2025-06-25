@@ -12,7 +12,9 @@ Table of Contents
 8. Constraint Satisfaction Problems
    
 Requirements
+
 •	Python 3.x
+
 •	No additional libraries are required.
 
 Contributing
